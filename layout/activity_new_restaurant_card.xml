@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/restaurant_card_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:id="@+id/activity_temp_restaurant"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:id="@+id/new_res_card_res_image"
+                android:scaleType="fitXY"
+                />
+
+            <me.grantland.widget.AutofitTextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/new_res_card_address"
+                android:text="7030 Warden Ave. Unit D3"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:layout_below="@+id/new_res_card_res_image"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:maxLines="1"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/new_res_card_favourite"
+                android:background="@drawable/like_24"
+                android:layout_above="@+id/new_res_card_open_hours"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="35dp"/>
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/new_res_card_open_hours"
+                android:text="Open today from 7:30 to 20:00"
+                android:textColor="@color/colorDarkOrange"
+                android:textSize="15sp"
+                android:layout_below="@id/new_res_card_address"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/gps"
+                android:id="@+id/new_res_card_gps"
+                android:layout_below="@+id/new_res_card_res_image"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/new_res_card_gps_distance"
+                android:text="7.8km"
+                android:textColor="@color/colorBlack"
+                android:layout_below="@+id/new_res_card_gps"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignLeft="@+id/new_res_card_gps"
+                android:layout_alignStart="@+id/new_res_card_gps"
+                android:layout_marginTop="0dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:id="@+id/new_res_card_black_line1"
+                android:background="@drawable/blackline"
+                android:layout_below="@+id/new_res_card_open_hours"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="175dp"
+                android:layout_below="@+id/new_res_card_open_hours"
+                android:background="@color/colorLighterGrey"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/restaurant_card_table_size"
+                android:id="@+id/restaurant_card_table_size"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/new_res_card_black_line1"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/restaurant_card_waiting_parties"
+                android:text="@string/restaurant_card_waiting_parties"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_below="@+id/new_res_card_black_line1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/restaurant_card_estimated_wait_time"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:id="@+id/restaurant_card_estimated_wait_time"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/new_res_card_black_line1"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"/>
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Small (1-2)"
+                android:id="@+id/restaurant_card_table_size_small"
+                android:layout_alignTop="@+id/restaurant_card_table_size"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:id="@+id/restaurant_card_waiting_parties_small"
+                android:textColor="@color/colorBlack"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/restaurant_card_waiting_parties"
+                android:layout_alignTop="@+id/restaurant_card_waiting_parties"
+                android:layout_marginTop="30dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textAlignment="center"
+                android:id="@+id/restaurant_card_estimated_wait_time_small"
+                android:layout_alignTop="@+id/restaurant_card_estimated_wait_time"
+                android:layout_alignLeft="@+id/restaurant_card_estimated_wait_time"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="30dp"
+                />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Medium (3-4)"
+                android:id="@+id/restaurant_card_table_size_medium"
+                android:layout_alignTop="@+id/restaurant_card_table_size_small"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/restaurant_card_waiting_parties_medium"
+                android:textColor="@color/colorBlack"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/restaurant_card_waiting_parties_small"
+                android:layout_alignTop="@+id/restaurant_card_waiting_parties_small"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textAlignment="center"
+                android:id="@+id/restaurant_card_estimated_wait_time_medium"
+                android:layout_alignTop="@+id/restaurant_card_estimated_wait_time_small"
+                android:layout_alignLeft="@+id/restaurant_card_estimated_wait_time_small"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="30dp"
+                />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Large (5+)"
+                android:id="@+id/restaurant_card_table_size_large"
+                android:layout_alignTop="@+id/restaurant_card_table_size_medium"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/restaurant_card_waiting_parties_large"
+                android:textColor="@color/colorBlack"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/restaurant_card_waiting_parties_medium"
+                android:layout_alignTop="@+id/restaurant_card_waiting_parties_medium"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textAlignment="center"
+                android:id="@+id/restaurant_card_estimated_wait_time_large"
+                android:layout_alignTop="@+id/restaurant_card_estimated_wait_time_medium"
+                android:layout_alignLeft="@+id/restaurant_card_estimated_wait_time_medium"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="30dp"
+                />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:id="@+id/new_res_card_get_in_line_button"
+                android:background="@drawable/rounded"
+                android:text="@string/restaurant_card_button"
+                android:textAllCaps="false"
+                android:layout_below="@+id/restaurant_card_waiting_parties_large"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:id="@+id/new_res_card_black_line2"
+                android:background="@drawable/blackline"
+                android:layout_below="@+id/new_res_card_get_in_line_button" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/new_res_card_promotion_text"
+                android:text="@string/restaurant_card_promotion"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:layout_below="@+id/new_res_card_get_in_line_button"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:id="@+id/new_res_card_listview"
+                android:layout_below="@+id/new_res_card_promotion_text"
+                android:layout_marginTop="0dp"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

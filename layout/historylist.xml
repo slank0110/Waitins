@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/history_image"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Large Text"
+        android:id="@+id/history_res_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/history_people"
+        android:layout_alignStart="@+id/history_people"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Large Text"
+        android:id="@+id/history_people"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/history_res_name"
+        android:layout_marginLeft="110dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Large Text"
+        android:id="@+id/history_start_time"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/history_duration"
+        android:layout_alignLeft="@+id/history_res_name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Large Text"
+        android:id="@+id/history_duration"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/history_people"
+        android:layout_alignLeft="@+id/history_people"
+        android:layout_alignStart="@+id/history_people" />
+
+</RelativeLayout>

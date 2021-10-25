@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/promotion_cell_relative"
+        android:layout_width="200dp"
+        android:layout_height="270dp">
+
+        <ImageView
+            android:id="@+id/promotion_cell_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/waintins_logo"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/hover_copy"
+            android:alpha='0.5'
+            android:scaleType="fitXY"/>
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/promotion_cell_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:maxLines="1"/>
+
+        <!--<TextView
+            android:id="@+id/promotion_cell_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentTop="true"
+            android:textAlignment="center"
+            android:ellipsize="end"
+            android:maxLines="1"/>-->
+
+        <TextView
+            android:id="@+id/promotion_cell_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textSize="44sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@+id/promotion_cell_title"
+            android:layout_alignLeft="@+id/promotion_cell_title"
+            android:layout_alignStart="@+id/promotion_cell_title" />
+
+        <ImageView
+            android:layout_width="230px"
+            android:layout_height="230px"
+            android:id="@+id/promotion_cell_button"
+            android:src="@drawable/promotion_get"
+            android:layout_below="@+id/promotion_cell_price"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:visibility="visible"
+            android:id="@+id/promotion_cell_restaurant_name"
+            android:layout_below="@+id/promotion_cell_button"
+            android:layout_marginRight="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/promotion_sold"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:id="@+id/promotion_cell_sold_text"
+            android:layout_toRightOf="@+id/promotion_cell_sold"
+            android:layout_alignBaseline="@+id/promotion_cell_sold"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/promotion_cell_sold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@id/promotion_cell_restaurant_name"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft= "35dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/promotion_cell_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_toRightOf="@+id/promotion_cell_sold_text"
+            android:layout_alignBaseline="@+id/promotion_cell_sold_text"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"/>
+
+        <TextView
+            android:id="@+id/promotion_cell_left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/promotion_left"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_toRightOf="@+id/promotion_cell_left"
+            android:layout_toEndOf="@+id/promotion_cell_left"
+            android:layout_alignBaseline="@+id/promotion_cell_left"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"/>
+
+
+    </RelativeLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/promotion_cell_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/waintins_logo"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/hover_copy"
+                    android:alpha='0.5'
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/promotion_cell_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="41dp"
+                    android:layout_alignParentTop="true"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/promotion_cell_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:layout_below="@+id/promotion_cell_title"
+                    android:layout_alignLeft="@+id/promotion_cell_title"
+                    android:layout_alignStart="@+id/promotion_cell_title" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/promotion_cell_button"
+                    android:src="@drawable/promotion_get"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/promotion_cell_price"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="visible"
+                    android:id="@+id/promotion_cell_restaurant_name"
+                    android:layout_alignBottom="@+id/promotion_cell_button"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sold"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:id="@+id/promotion_cell_sold_text"
+                    android:layout_toRightOf="@+id/promotion_cell_sold"
+                    android:layout_alignBaseline="@+id/promotion_cell_sold"
+                    android:layout_marginLeft="5dp"/>
+
+                <TextView
+                    android:id="@+id/promotion_cell_sold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft= "35dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <TextView
+                    android:id="@+id/promotion_cell_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_toRightOf="@+id/promotion_cell_sold_text"
+                    android:layout_alignBaseline="@+id/promotion_cell_sold_text"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginStart="25dp"/>
+
+                <TextView
+                    android:id="@+id/promotion_cell_left_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="left"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_toRightOf="@+id/promotion_cell_left"
+                    android:layout_toEndOf="@+id/promotion_cell_left"
+                    android:layout_alignBaseline="@+id/promotion_cell_left"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/middleCut"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/promotion_cell_background"
+        android:layout_toEndOf="@+id/promotion_cell_background" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/centerCut"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />-->
+
+</RelativeLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/promotion_item_detail_title"
+                android:text="PromotionItemTitle"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:background="@drawable/gps"
+                android:layout_toRightOf="@+id/promotion_item_detail_title"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/promotion_item_detail_sale_price"
+                android:text="Sale Price:"
+                android:textColor="@color/colorDarkOrange"
+                android:textSize="20sp"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/promotion_item_detail_sale_price_value"
+                android:text="$$$"
+                android:textColor="@color/colorDarkOrange"
+                android:textSize="20sp"
+                android:layout_toRightOf="@+id/promotion_item_detail_sale_price"
+                android:layout_alignBaseline="@+id/promotion_item_detail_sale_price"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/promotion_item_detail_original_price"
+                android:text="From: "
+                android:textSize="15sp"
+                android:layout_below="@+id/promotion_item_detail_sale_price_value"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$$$"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/promotion_item_detail_original_price"
+                android:layout_alignBaseline="@+id/promotion_item_detail_original_price"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/promotion_item_detail_valid_till"
+                android:text="Valid till "
+                android:textColor="@color/colorBlack"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="65dp"
+                android:layout_marginRight="85dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/promotion_item_detail_valid_till_date"
+                android:text="2016/07/10"
+                android:textColor="@color/colorBlack"
+                android:layout_alignBaseline="@+id/promotion_item_detail_valid_till"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="5dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/promotion_item_detail_sold"
+                android:text="Sold: "
+                android:textSize="20sp"
+                android:textColor="@color/colorDarkOrange"
+                android:layout_below="@+id/promotion_item_detail_valid_till"
+                android:layout_alignLeft="@+id/promotion_item_detail_valid_till"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/promotion_item_detail_sold_value"
+                android:text="18"
+                android:textSize="20sp"
+                android:textColor="@color/colorDarkOrange"
+                android:layout_toRightOf="@+id/promotion_item_detail_sold"
+                android:layout_alignBaseline="@+id/promotion_item_detail_sold"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/promotion_item_detail_text"
+                android:text="Item Details: "
+                android:textSize="18sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="130dp"
+                android:layout_alignLeft="@+id/promotion_item_detail_sale_price"
+                />
+            
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/promotion_item_detail_listview"
+                android:layout_below="@+id/promotion_item_detail_text"
+                android:layout_alignLeft="@+id/promotion_item_detail_text"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/promotion_item_detail_listview"
+                android:id="@+id/promotion_item_detail_restaurant_notice"
+                android:text="Restaurant reminder/info:"
+                android:textSize="18sp"
+                android:textColor="@color/colorBlack"
+                android:layout_alignLeft="@+id/promotion_item_detail_sale_price" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get It Now!"
+                android:background="@drawable/rounded"
+                android:id="@+id/promotion_item_detail_button"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

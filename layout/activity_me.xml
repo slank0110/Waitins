@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="logicreat.waitins.MeTab">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:id="@+id/hover_view"
+            android:visibility="invisible"/>
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/me_pager_indicator"
+            app:pstsShouldExpand="true"
+            app:pstsTextAllCaps="true"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:background="@drawable/tab_color_selector"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/me_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            android:layout_weight="1.45" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/tv1"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="205dp"
+        android:layout_marginStart="205dp"
+        android:id="@+id/tv2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/me_time_saved_text"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/me_time_saved_text"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:paddingTop="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textColor="@color/colorGreen"
+        android:textSize="25sp"
+        android:id="@+id/me_time_saved_hr_value"
+        android:layout_below="@+id/me_time_saved_text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/me_time_saved_hr"
+        android:text="@string/me_time_saved_hr"
+        android:textColor="@color/colorBlack"
+        android:layout_toRightOf="@+id/me_time_saved_hr_value"
+        android:layout_toEndOf="@+id/me_time_saved_hr_value"
+        android:layout_alignBaseline="@+id/me_time_saved_hr_value"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/me_timed_saved_min_value"
+        android:text="-"
+        android:textSize="25sp"
+        android:textColor="@color/colorGreen"
+        android:layout_toRightOf="@+id/me_time_saved_hr"
+        android:layout_toEndOf="@+id/me_time_saved_hr"
+        android:layout_alignBaseline="@+id/me_time_saved_hr_value"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/me_time_saved_min"
+        android:text="@string/me_time_saved_min"
+        android:textColor="@color/colorBlack"
+        android:layout_toRightOf="@+id/me_timed_saved_min_value"
+        android:layout_toEndOf="@+id/me_timed_saved_min_value"
+        android:layout_alignBaseline="@+id/me_time_saved_hr_value"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/me_money_saved_text"
+        android:text="@string/me_money_saved_text"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:layout_alignBottom="@+id/me_time_saved_text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/me_money_saved_sign"
+        android:text="@string/me_money_saved_sign"
+        android:textColor="@color/colorBlack"
+        android:layout_alignBaseline="@+id/me_time_saved_min"
+        android:layout_below="@id/me_money_saved_text"
+        android:layout_alignStart="@+id/me_money_saved_text"
+        android:layout_alignLeft="@+id/me_money_saved_text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/me_money_saved_value"
+        android:text="-"
+        android:textSize="25sp"
+        android:textColor="@color/colorBrightOrange"
+        android:layout_toRightOf="@+id/me_money_saved_sign"
+        android:layout_toEndOf="@+id/me_money_saved_sign"
+        android:layout_alignBaseline="@+id/me_money_saved_sign"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        />
+
+</RelativeLayout>

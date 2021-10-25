@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#f6f6f6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:id="@+id/promotion_item_detail_layer_one"
+                    android:layout_marginLeft="5dp">
+
+                    <me.grantland.widget.AutofitTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_item_detail_promotion_title"
+                        android:text="PromotionItemTitle"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="30sp"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        android:maxLines="1"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_item_detail_sale_price"
+                        android:text="@string/plate_sale_price_text"
+                        android:textColor="@color/colorDarkOrange"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_item_detail_sale_price_value"
+                        android:layout_toRightOf="@+id/promotion_item_detail_sale_price"
+                        android:layout_alignBaseline="@id/promotion_item_detail_sale_price"
+                        android:text="$$$"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorDarkOrange"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_item_detail_original_price"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp"
+                        android:text="@string/plate_price_from"
+                        android:layout_alignBaseline="@+id/promotion_item_detail_sold_value" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_item_detail_original_price_value"
+                        android:text="$$$"
+                        android:textSize="15sp"
+                        android:background="@drawable/diagonal_line"
+                        android:layout_toRightOf="@+id/promotion_item_detail_original_price"
+                        android:layout_alignBaseline="@+id/promotion_item_detail_original_price"
+                        android:layout_marginLeft="10dp"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_item_detail_valid_till_date"
+                        android:text="2016/07/10"
+                        android:textColor="@color/colorBlack"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignBaseline="@+id/promotion_item_detail_sale_price"
+                        android:layout_marginRight="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_item_detail_valid_till"
+                        android:text="@string/plate_expiry_date"
+                        android:textColor="@color/colorBlack"
+                        android:layout_toLeftOf="@+id/promotion_item_detail_valid_till_date"
+                        android:layout_alignBaseline="@+id/promotion_item_detail_sale_price" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_item_detail_sold_value"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/promotion_item_detail_valid_till_date"
+                        android:text="18"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorDarkOrange"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_item_detail_sold"
+                        android:text="@string/plate_sold"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorDarkOrange"
+                        android:layout_alignBaseline="@id/promotion_item_detail_sold_value"
+                        android:layout_toLeftOf="@id/promotion_item_detail_sold_value" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:id="@+id/promotion_item_detail_layer_two"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rectangle_border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plate_res_name"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18dp"
+                        android:id="@+id/promotion_item_detail_restaurant_title"
+                        android:textColor="@color/colorBlack"/>
+
+                    <me.grantland.widget.AutofitTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_item_detail_title"
+                        android:text="Restaurant Name"
+                        android:layout_below="@+id/promotion_item_detail_restaurant_title"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:maxLines="1"/>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignBottom="@+id/promotion_item_detail_title"
+                        android:background="@drawable/gps"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:id="@+id/promotion_item_detail_layer_three"
+                    android:background="@drawable/rectangle_border_less_bottom"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_item_detail_text"
+                        android:text="@string/plate_details"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/promotion_item_detail_plate_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/promotion_item_detail_text"
+                        android:text="Blah blah blah blah blah blah blah blah"
+                        android:layout_alignLeft="@+id/promotion_item_detail_text"
+                        android:layout_marginBottom="10dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/rectangle_border_no_top">
+
+                    <org.lucasr.twowayview.TwoWayView
+                        android:id="@+id/promotion_item_detail_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/TwoWayView"
+                        android:drawSelectorOnTop="false"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:id="@+id/promotion_item_detail_layer_four"
+                    android:background="@drawable/rectangle_border"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plate_res_reminder"
+                        android:id="@+id/promotion_item_detail_restaurant_notice"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_item_detail_restaurant_notice_text"
+                        android:layout_below="@+id/promotion_item_detail_restaurant_notice"
+                        android:text="Blah Blah Blah Blah Blah Blah Blah Blah Blah"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:id="@+id/promotion_item_detail_layer_five"
+                    android:background="@drawable/rectangle_border"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_item_detail_other_promotion_title"
+                        android:text="@string/plate_other_promotion"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/promotion_item_detail_other_promotion"
+                        android:layout_below="@+id/promotion_item_detail_other_promotion_title"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/promotion_item_detail_button"
+            android:background="@color/colorPrimaryYellow"
+            android:text="@string/plate_get_it_now"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="0.1"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

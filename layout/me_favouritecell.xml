@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp">
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/me_favourite_item_image"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:id="@+id/me_favourite_item_image_inside"
+                android:src="@drawable/like_filled_24"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KIRPICHI BURGER BAR"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:id="@+id/me_favourite_name"
+            android:layout_alignTop="@+id/me_favourite_item_image"
+            android:layout_toRightOf="@+id/me_favourite_item_image"
+            android:layout_toEndOf="@+id/me_favourite_item_image"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15 yonge st"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:id="@+id/me_favourite_address"
+            android:layout_below="@id/me_favourite_name"
+            android:layout_alignStart="@id/me_favourite_name"
+            android:layout_alignLeft="@id/me_favourite_name"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disc_card_view_small_table_inline_text"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:id="@+id/me_favourite_inline_text_small"
+            android:layout_toRightOf="@+id/me_favourite_inline_value_small"
+            android:layout_alignBottom="@+id/me_favourite_inline_value_small"
+            android:layout_marginLeft="3dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disc_card_view_medium_table_inline_text"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:id="@+id/me_favourite_inline_text_medium"
+            android:layout_toRightOf="@+id/me_favourite_inline_value_medium"
+            android:layout_alignBottom="@+id/me_favourite_inline_value_medium"
+            android:layout_marginLeft="3dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disc_card_view_large_table_inline_text"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:id="@+id/me_favourite_inline_text_large"
+            android:layout_toRightOf="@+id/me_favourite_inline_value_large"
+            android:layout_alignBottom="@+id/me_favourite_inline_value_large"
+            android:layout_marginLeft="3dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:textSize="20sp"
+            android:textColor="@color/colorBrightOrange"
+            android:id="@+id/me_favourite_inline_value_small"
+            android:layout_below="@+id/me_favourite_address"
+            android:layout_alignBottom="@+id/me_favourite_item_image"
+            android:layout_toRightOf="@+id/me_favourite_item_image"
+            android:layout_toEndOf="@+id/me_favourite_item_image"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="20sp"
+            android:textColor="@color/colorBrightOrange"
+            android:id="@+id/me_favourite_inline_value_medium"
+            android:layout_toRightOf="@+id/me_favourite_inline_text_small"
+            android:layout_alignBottom="@id/me_favourite_inline_text_small"
+            android:layout_marginLeft="3dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:textColor="@color/colorBrightOrange"
+            android:id="@+id/me_favourite_inline_value_large"
+            android:layout_toRightOf="@+id/me_favourite_inline_text_medium"
+            android:layout_alignBottom="@+id/me_favourite_inline_text_medium"
+            android:layout_marginLeft="3dp"
+            />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="@string/me_fav_line_up"
+            android:textSize="13sp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/cornerbutton"
+            android:id="@+id/me_favourite_lineup_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/me_favourite_inline_value_small" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

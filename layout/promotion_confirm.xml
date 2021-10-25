@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/promotion_confirm_relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.30"
+                    android:background="@drawable/prepayment_image"
+                    android:alpha="0.7">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_confirm_total_cost"
+                        android:gravity="center"
+                        android:text="@string/plate_confirm_total_cost"
+                        android:textSize="30sp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/promotion_confirm_total_cost_value"
+                        android:gravity="center"
+                        android:text="666.00"
+                        android:textSize="25sp"
+                        android:layout_below="@+id/promotion_confirm_total_cost"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="20dp"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:src="@drawable/blackline"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.50">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recepit_first"
+                        android:text="3lbs lobster for "
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/value_first"
+                        android:text="$88"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignBottom="@id/recepit_first"/>
+
+                    <ListView
+                        android:id="@+id/promotion_confirm_list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/recepit_first"
+                        />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:id="@+id/recepit_split"
+                        android:background="@drawable/dotted_thin"
+                        android:layout_below="@+id/promotion_confirm_list_view"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Total"
+                        android:id="@+id/plate_confirm_sub_total_text"
+                        android:layout_below="@+id/recepit_split"
+                        android:layout_alignLeft="@+id/recepit_first"
+                        android:layout_alignStart="@+id/recepit_first" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/value_second"
+                        android:text="$88"
+                        android:layout_below="@+id/recepit_split"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tax"
+                        android:id="@+id/plate_confirm_tax_text"
+                        android:layout_below="@+id/plate_confirm_sub_total_text"
+                        android:layout_alignLeft="@+id/plate_confirm_sub_total_text"
+                        android:layout_alignStart="@+id/plate_confirm_sub_total_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HST"
+                        android:id="@+id/plate_confirm_hst_text"
+                        android:layout_below="@+id/plate_confirm_tax_text"
+                        android:layout_alignLeft="@+id/plate_confirm_sub_total_text"
+                        android:layout_alignStart="@+id/plate_confirm_sub_total_text"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$100"
+                        android:id="@+id/plate_confirm_hst_value"
+                        android:layout_alignBottom="@+id/plate_confirm_hst_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/colorBlack"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:id="@+id/recepit_split2"
+                        android:background="@drawable/dotted_thin"
+                        android:layout_below="@+id/plate_confirm_hst_value"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:id="@+id/plate_confirm_total_text"
+                        android:layout_below="@+id/recepit_split2"
+                        android:layout_alignLeft="@+id/plate_confirm_tax_text"
+                        android:layout_alignStart="@+id/plate_confirm_tax_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$666"
+                        android:id="@+id/plate_confirm_total_cost"
+                        android:layout_alignTop="@+id/plate_confirm_total_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/colorBlack"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plate_confirm_tips_note"
+                        android:id="@+id/plate_confirm_tips_text"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="10dp"/>
+
+                    <!--
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="Proceed to Payment"
+                        android:id="@+id/button"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp" />
+                        -->
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/promotion_confirm_payment_button"
+            android:text="@string/plate_confirm_proceed_to_payment"
+            android:textAllCaps="false"
+            android:background="@color/colorPrimaryYellow"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="0.1"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
